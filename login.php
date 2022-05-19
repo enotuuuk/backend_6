@@ -24,9 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 <?php
 } else {
     print($_SERVER['REQUEST_METHOD']);
-    $user = 'u47531';
-    $pass = '7833721';
-    $db = new PDO('mysql:host=localhost;dbname=u47531', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+    $user = 'u41031';
+    $pass = '1232344';
+    $db = new PDO('mysql:host=localhost;dbname=u41031', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
     $login = $_POST['login'];
     try {
         $stmt = $db->prepare("SELECT * FROM heroes2 WHERE login = ?");

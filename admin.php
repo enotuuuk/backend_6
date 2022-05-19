@@ -1,7 +1,7 @@
 <?php
-$user = 'u47531';
-$pass = '7833721';
-$db = new PDO('mysql:host=localhost;dbname=u47531', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+$user = 'u41031';
+$pass = '1232344';
+$db = new PDO('mysql:host=localhost;dbname=u41031', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 $stmt = $db->prepare("SELECT * FROM admins");
 $stmt->execute([]);
 $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -23,9 +23,9 @@ if (
 
 print('Вы успешно авторизовались и видите защищенные паролем данные.');
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $user = 'u47531';
-    $pass = '7833721';
-    $db = new PDO('mysql:host=localhost;dbname=u47531', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+    $user = 'u41031';
+    $pass = '1232344';
+    $db = new PDO('mysql:host=localhost;dbname=u41031', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
     try {
 
         $stmt = $db->prepare("SELECT * FROM heroes2");
@@ -62,9 +62,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
 } else {
     if (array_key_exists('delete', $_POST)) {
-        $user = 'u47531';
-        $pass = '7833721';
-        $db = new PDO('mysql:host=localhost;dbname=u47531', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+        $user = 'u41031';
+        $pass = '1232344';
+        $db = new PDO('mysql:host=localhost;dbname=u41031', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
         try {
             $stmt = $db->prepare("SELECT login FROM heroes2 WHERE id = ?");
             $stmt->execute([$_POST['uid']]);
@@ -82,9 +82,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         exit();
     }
     if (array_key_exists('update', $_POST)) {
-        $user = 'u47531';
-        $pass = '7833721';
-        $db = new PDO('mysql:host=localhost;dbname=u47531', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+        $user = 'u41031';
+        $pass = '1232344';
+        $db = new PDO('mysql:host=localhost;dbname=u41031', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
         $fio = $_POST['fio'];
         $email = $_POST['email'];
         $date = $_POST['date'];
